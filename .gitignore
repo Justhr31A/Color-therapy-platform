@@ -1,0 +1,35 @@
+# ---- dependencies ----
+node_modules/
+
+# ---- secrets / environment (NEVER commit) ----
+.env
+.env.*
+!.env.example
+
+# ---- databases and DB backups (contain user/patient data) ----
+*.db
+*.db-wal
+*.db-shm
+*.db-journal
+*.sqlite
+*.sqlite3
+backend/data/
+
+# ---- private keys / certificates (e.g. mkcert files used for phone testing) ----
+*.pem
+*.key
+*.p12
+*.pfx
+
+# ---- generated output ----
+dist/
+build/
+coverage/
+
+# ---- logs, OS and editor noise ----
+*.log
+npm-debug.log*
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

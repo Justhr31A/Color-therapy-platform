@@ -1,0 +1,13 @@
+{
+  "name": "colour-therapy-protocol-platform",
+  "private": true,
+  "description": "Helper scripts only. backend/ and frontend/ keep their own package.json and dependencies.",
+  "engines": {
+    "node": ">=20.6"
+  },
+  "scripts": {
+    "test": "npm --prefix backend test && npm --prefix frontend test",
+    "test:backend": "npm --prefix backend test",
+    "test:frontend": "npm --prefix frontend test"
+  }
+}

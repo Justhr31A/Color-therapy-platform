@@ -1,0 +1,33 @@
+{
+  "name": "colour-therapy-backend",
+  "version": "1.0.0",
+  "description": "Colour Therapy Protocol Platform backend (Express + PostgreSQL/Neon)",
+  "main": "src/server.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "test": "node tests/helpers/banner.js && node --test tests/adminSeed.test.js tests/ai.admin-flag.http.test.js tests/ai.assistant.http.test.js tests/ai.provider-service.test.js tests/ai.stage2.http.test.js tests/ai.stage2.matching.test.js tests/ai.text-matcher.test.js tests/auth.cookies.test.js tests/camera.http.test.js tests/catalog.test.js tests/doctor.studio.test.js tests/featureFlags.test.js tests/handAssets.test.js tests/http.integration.test.js tests/legacy-sqlite.migrations.test.js tests/legacy-sqlite.publishing-migration.test.js tests/lifecycle-snapshot-validation.test.js tests/payments.http.test.js tests/payments.service.test.js tests/policy-and-vocabulary.test.js tests/postgres.migrations.test.js tests/postgres.runtime.test.js tests/publishing.http.test.js tests/publishing.lifecycle.test.js tests/publishing.versions.test.js tests/slug.test.js tests/sqlite-import.test.js tests/studio.data.test.js tests/users.repo.test.js",
+    "db:status": "node scripts/db-status.js",
+    "db:migrate": "node scripts/db-migrate.js",
+    "admin:create": "node scripts/create-admin.js",
+    "flags": "node scripts/flags.js",
+    "db:import-sqlite": "node scripts/import-sqlite-to-postgres.js",
+    "db:pg:migrate": "node scripts/db-migrate.js",
+    "db:pg:status": "node scripts/db-status.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "morgan": "^1.10.0",
+    "pg": "^8.23.1",
+    "uuid": "^9.0.1"
+  },
+  "optionalDependencies": {
+    "better-sqlite3": "^11.3.0"
+  }
+}

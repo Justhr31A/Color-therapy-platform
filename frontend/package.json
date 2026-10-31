@@ -1,0 +1,30 @@
+{
+  "name": "colour-therapy-frontend",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "node tests/support/banner.mjs && node --import ./tests/support/register.mjs --test tests/similarityTransform.test.mjs tests/pixelSpace.test.mjs tests/protocolMapper.test.mjs tests/videoCover.test.mjs tests/chirality.test.mjs tests/referencePoints.test.mjs tests/drawProtocolOverlay.test.mjs tests/objectTypes.contract.test.mjs tests/builderStore.test.mjs tests/studioModel.test.mjs tests/studioStore.test.mjs tests/studioImportExport.test.mjs tests/studioBackend.e2e.test.mjs tests/studioPanels.render.test.mjs tests/studioCanvas.render.test.mjs tests/publicRenderMarkings.test.mjs tests/publicDownload.test.mjs tests/publicPages.render.test.mjs tests/adminConditions.render.test.mjs tests/publicLegacyParity.test.mjs tests/publicPdf.test.mjs tests/publicShare.test.mjs tests/publicPdf.published.test.mjs tests/publishedPdf.test.mjs tests/doctorStudioWiring.test.mjs tests/findProtocol.test.mjs tests/adminAiSettings.render.test.mjs tests/paymentAccess.test.mjs tests/publicCamera.test.mjs tests/publicCamera.render.test.mjs tests/handSkeleton.test.mjs tests/handTracking.test.mjs tests/arAccuracy.synthetic.test.mjs tests/arTools.render.test.mjs",
+    "ar:benchmark": "node --import ./tests/support/register.mjs tools/ar/benchmark.mjs",
+    "ar:report": "node --import ./tests/support/register.mjs tools/ar/validation-report.mjs"
+  },
+  "dependencies": {
+    "@mediapipe/tasks-vision": "0.10.14",
+    "axios": "^1.7.7",
+    "konva": "^9.3.14",
+    "pdf-lib": "^1.17.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-konva": "^18.2.10",
+    "react-router-dom": "^6.26.2",
+    "uuid": "^9.0.1",
+    "zustand": "^4.5.5"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.1",
+    "vite": "^5.4.6"
+  }
+}
